@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Location Viewer</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZn4eX8e-u39se1QXei4sXXKk2l4O2zrQ"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title animate-fade-in-down">Find Location from Image</h1>
+        <form id="uploadForm" class="form animate-fade-in-up">
+            <label for="imageInput" class="file-input-label">
+                Choose File
+                <input type="file" id="imageInput" accept="image/*">
+            </label>
+            
+        </form>
+        <p id="status" class="status"></p>
+        <div id="imagePreview" class="image-preview animate-fade-in">
+            <img id="uploadedImage" src="" alt="Uploaded image" style="display: none;">
+            <p id="imageText" class="image-text"></p>
+        </div>
+        <div id="map" class="map animate-fade-in"><p>Where are you?</p></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
