@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   const lat = toDecimal(exif.GPSLatitude, exif.GPSLatitudeRef);
                   const lng = toDecimal(exif.GPSLongitude, exif.GPSLongitudeRef);
                   status.textContent = "Gotcha!!!";
+                  status.textContent = `Your latitude: ${lat} and longitude: ${lng} | *go paste it in google maps if preview is not working`
                   initMap(lat, lng);
               } else {
                   status.textContent = "OHH shoot you're unpredictable!! . Try another image";
